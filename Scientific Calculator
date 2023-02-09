@@ -1,0 +1,195 @@
+#Andres Portillo
+#2/7/2023
+#COP3502C
+#sci_calculator.py
+
+#We first need to define the values
+import math
+
+current_result = 0.0
+total_results = 0.0
+num_calculations = 0
+avg_calculations = 0
+
+
+
+print("\nCurrent Result: ", current_result)
+
+
+print ('Calculator Menu')
+print ('---------------')
+print ()
+print ('0. Exit Program')
+print ('1. Addition')
+print ('2. Subtraction')
+print ('3. Multiplication')
+print ('4. Division')
+print ('5. Exponentiation')
+print ('6. Logarithm ')
+print ('7. Display Average')
+print ()
+
+while True:
+    user_decision = int(input('Enter Menu Selection: '))
+
+    if user_decision == 0:
+        print ('\nThanks for using this calculator. Goodbye!')
+        break
+    elif user_decision == 1:
+
+        num1 = float(input('Enter first operand: '))
+        num2 = float(input('Enter second operand: '))
+        current_result = num1 + num2
+        total_results += current_result
+        num_calculations += 1
+        print("Current Result: " + str(current_result))
+        print()
+        print('Calculator Menu')
+        print('---------------')
+        print()
+        print('0. Exit Program')
+        print('1. Addition')
+        print('2. Subtraction')
+        print('3. Multiplication')
+        print('4. Division')
+        print('5. Exponentiation')
+        print('6. Logarithm ')
+        print('7. Display Average')
+        print()
+
+
+    elif user_decision == 2:
+
+        num1 = float(input('Enter first operand: '))
+        num2 = float(input('Enter second operand: '))
+        current_result = num1 - num2
+        total_results += current_result
+        num_calculations += 1
+        print("Current Result: " + str(current_result))
+        print()
+        print('Calculator Menu')
+        print('---------------')
+        print()
+        print('0. Exit Program')
+        print('1. Addition')
+        print('2. Subtraction')
+        print('3. Multiplication')
+        print('4. Division')
+        print('5. Exponentiation')
+        print('6. Logarithm ')
+        print('7. Display Average')
+        print()
+
+
+    elif user_decision == 3:
+
+        num1 = float(input('Enter first operand: '))
+        num2 = float(input('Enter second operand: '))
+        current_result = num1 * num2
+        total_results += current_result
+        num_calculations += 1
+        print("Current Result: " + str(current_result))
+        print()
+        print('Calculator Menu')
+        print('---------------')
+        print()
+        print('0. Exit Program')
+        print('1. Addition')
+        print('2. Subtraction')
+        print('3. Multiplication')
+        print('4. Division')
+        print('5. Exponentiation')
+        print('6. Logarithm ')
+        print('7. Display Average')
+        print()
+
+
+    elif user_decision == 4:
+
+        num1 = float(input('Enter first operand: '))
+        num2 = float(input('Enter second operand: '))
+        current_result = num1 / num2
+        total_results += current_result
+        num_calculations += 1
+        print("Current Result: " + str(current_result))
+        print()
+        print('Calculator Menu')
+        print('---------------')
+        print()
+        print('0. Exit Program')
+        print('1. Addition')
+        print('2. Subtraction')
+        print('3. Multiplication')
+        print('4. Division')
+        print('5. Exponentiation')
+        print('6. Logarithm ')
+        print('7. Display Average')
+        print()
+
+    elif user_decision == 5:
+
+        num1 = float(input('Enter first operand: '))
+        num2 = float(input('Enter second operand: '))
+        current_result = num1 ** num2
+        total_results += current_result
+        num_calculations += 1
+        print("Current Result: " + str(current_result))
+        print()
+        print('Calculator Menu')
+        print('---------------')
+        print()
+        print('0. Exit Program')
+        print('1. Addition')
+        print('2. Subtraction')
+        print('3. Multiplication')
+        print('4. Division')
+        print('5. Exponentiation')
+        print('6. Logarithm ')
+        print('7. Display Average')
+        print()
+
+
+    elif user_decision == 6:
+        num1 = float(input('Enter first operand: '))
+        num2 = float(input('Enter second operand: '))
+        current_result = math.log(num2, num1)
+        total_results += current_result
+        num_calculations += 1
+        print("Current Result: " + str(current_result))
+        print()
+        print('Calculator Menu')
+        print('---------------')
+        print()
+        print('0. Exit Program')
+        print('1. Addition')
+        print('2. Subtraction')
+        print('3. Multiplication')
+        print('4. Division')
+        print('5. Exponentiation')
+        print('6. Logarithm ')
+        print('7. Display Average')
+        print()
+
+
+    elif user_decision == 7:
+        if num_calculations == 0:
+            print("\nError: No calculations yet to average!")
+        else:
+            print("Sum of calculations: ", total_results)
+            print("Number of calculations: ", num_calculations)
+            avg_calculations = total_results / num_calculations
+            print("Average of calculations: {:.2f}".format(avg_calculations))
+
+    else:
+            print("Error: Invalid selection!")
+
+
+
+
+
+
+
+
+
+
+
