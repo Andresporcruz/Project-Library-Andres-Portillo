@@ -1,0 +1,34 @@
+#First we need to set the variables for the calculator to use
+print("Enter first operand:")
+num1 = float(input())
+#This allows the users to set any 2 numbers of their preference
+print("Enter second operand:")
+num2 = float(input())
+
+#The calculator menu that tells the user how to use the calculator
+print("Calculator Menu")
+print("---------------")
+print("1. Addition")
+print("2. Subtraction")
+print("3. Multiplication")
+print("4. Division")
+#Each value represent a different equation
+print("Which operation do you want to perform?")
+
+choice = int(input())
+#The calculation being created for each unique scenario
+if choice == 1:
+    result = num1 + num2
+elif choice == 2:
+    result = num1 - num2
+elif choice == 3:
+    result = num1 * num2
+elif choice == 4:
+    result = num1 / num2
+
+
+else:
+    print("Error: Invalid selection! Terminating program.")
+    exit()
+
+print(f"The result of the operation is {result}. Goodbye!")
