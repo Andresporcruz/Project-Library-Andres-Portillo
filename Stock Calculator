@@ -1,0 +1,47 @@
+def main():
+
+    #1. Variables.
+
+    PurNumShares = 0.0
+    PurPrice = 0.0
+    PurCommission = 0.02
+    PurCommissionTotal = 0.0
+    totalPurchaseAmount = 0.0
+    saleNumShare = 0.0
+    salePrice = 0.0
+    saleCommission = 0.02
+    saleCommissionTotal= 0.0
+    commissionTotal = 0.0
+    totalSalesAmount = 0.0
+    profit = 0.0
+    
+    
+    #2. Ask User. #3. Store value
+    PurNumShares = float(input('How many shares did you buy?: $'))
+    PurPrice = float(input('What was the purchase price per share?: $'))
+    saleNumShare = float(input('How many shares did you sell?: $'))
+    salePrice = float(input('how much did you sell the stock for?: $'))
+    
+    
+    #4. Calculations / Decisions
+
+    
+    PurCommissionTotal = (PurPrice * PurNumShares) * PurCommission
+    saleCommissionTotal = (salePrice * saleNumShare) * saleCommission
+    commissionTotal = PurCommissionTotal + saleCommissionTotal
+    totalSalesAmount = saleNumShare * salePrice 
+    totalPurchaseAmount = PurNumShares * PurPrice 
+    profit = (totalSalesAmount - totalPurchaseAmount) - commissionTotal
+
+    #5. Display
+    print ('Purchase Price per share: $', PurPrice)
+    print ('Purchase Commission: $', PurCommission)
+    print ('Purchase Commission Total: $', PurCommissionTotal)
+    print ('Purchase Total: $', totalPurchaseAmount)
+    print ('Sale Price: $ ', salePrice)
+    print ('Sale Commission per share: $', saleCommission)
+    print ('Sale Commission total: $', saleCommissionTotal)
+    print ('Sale Total: $', totalSalesAmount)
+    print ('Profit: $', profit)
+
+main()
