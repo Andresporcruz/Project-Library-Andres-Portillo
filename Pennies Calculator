@@ -1,0 +1,32 @@
+def main ():
+
+    #1. Variables
+    days = 0 #number of days the user worked
+    currentDay = 0
+    salary = 0.01 #initial salary on day 1
+    dailyPennies = 0.0
+    dailyDollars = 0.0
+    totalNumberOfPennies = 0.0 #self explanatory
+    totalSalary = 0.0 #total in Dollar Amount
+    
+
+    #2. Ask user how for range
+    days = int(input('How many days did you work for?: '))
+    #formatting the top colums of the chart
+    print() #new line
+    print ('Days  | Pennies')
+    print ('___________________')
+
+    #4. Calculations / Statements #5. Display Chart
+    for currentDay in range (days):
+        dailyPennies = 2 ** currentDay #adding exponents
+        dailyDollars = dailyPennies * 0.01 #converting to dollars
+        totalNumberOfPennies += dailyPennies 
+        print( currentDay + 1, "\t",'$',dailyDollars) #exponents throught the days
+
+    totalSalary = totalNumberOfPennies *0.01 #converting total from cents to dollars
+
+     #Display Total in dollars
+    print ('The total pay is: $', totalSalary)
+    
+main()
